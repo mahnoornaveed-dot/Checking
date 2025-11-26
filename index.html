@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rabia To Ibtesam</title>
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" /> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @font-face {
+     font-family:font;
+  /* src: url(font/Dear\ Script\ \(Demo_Font\).otf); */
+  src: url(font/Dear\ Script\ \(Demo_Font\).otf);  
+  }
+
+  h1{
+  font-family: font;
+  }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: linear-gradient(to bottom, #ffe0b2, #ffcc80);
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+
+    header {
+      font-size: 2.5rem;
+      color: #d84315;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      animation: fadeInDown 2s;
+    }
+
+    .subtext {
+      font-size: 1.2rem;
+      color: #4e342e;
+      margin-bottom: 3rem;
+      font-weight: 500;
+      animation: fadeInDown 2s;
+      animation-delay: 0.5s;
+    }
+
+    .gift-box {
+      width: 200px;
+      height: 200px;
+      background-image: url('./assets/images-removebg-preview.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-25px);
+      }
+    }
+
+    .click-label {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #ff7043;
+      color: white;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 1rem;
+      animation: fadeInUp 2s ease-out forwards;
+      animation-delay: 1s;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Mr.Ibtesam Ahmed ❤</header>
+  <div class="subtext">Special Note From Rabia Ahmed </div>
+
+  <div class="gift-box" onclick="openNote()" title="Click to open your surprise"></div>
+  <div class="click-label">Click Ribbon</div>
+
+  <script>
+    function openNote() {
+      window.open('./assets/birthday-note.html', '_blank');
+    }
+  </script>
+
+</body>
+</html>
